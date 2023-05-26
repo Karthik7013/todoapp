@@ -1,0 +1,499 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Poppins:wght@400;600&family=Sacramento&family=Shantell+Sans&family=Source+Sans+Pro:wght@300;400;600&family=Ubuntu&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+    scroll-behavior: smooth;
+    font-style: Montserrat;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 0;
+}
+
+/* header */
+header {
+    color: #1a133a;
+    height: 60px;
+    width: 100%;
+    padding: 0 20px;
+    background-color: #ffffff;
+    box-shadow: 2px 4px 5px #d7d5de;
+}
+
+nav {
+    height: 50px;
+    display: flex;
+    width: 100%;
+    height: inherit;
+    align-items: center;
+}
+
+/* nav-left */
+.nav-right {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    height: 50px;
+}
+
+.nav-right .nav-title h1 {
+    font-family: Ubuntu;
+    font-weight: 600;
+}
+
+.nav-right .nav-title h1 a {
+    color: #1a133a;
+}
+
+.nav-middle {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 50%;
+    height: 50px;
+}
+
+
+.nav-logo i {
+    cursor: pointer;
+    font-size: 1.8em;
+    color: rgb(39, 36, 36);
+    transition: all .3s linear;
+}
+
+.nav-logo i:hover {
+    transform: rotate(180deg);
+}
+
+
+/* nav-right */
+.nav-left {
+    width: 0;
+    height: 50px;
+    overflow: hidden;
+}
+
+.nav-left ul {
+    height: 100%;
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+
+.nav-left ul li {
+    padding: 0 10px;
+}
+
+.nav-left ul li a {
+    color: black;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.2em;
+    height: 100%;
+}
+
+.nav-left ul li .theme {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    font-size: 1.2em;
+}
+
+.nav-left ul li .theme span {
+    background-color: inherit;
+    margin-right: 10px;
+    color: black;
+}
+
+.nav-left ul li .theme i {
+    cursor: pointer;
+    background-color: inherit;
+    color: black;
+    font-size: 1.2em;
+}
+
+
+
+@media screen and (min-width:885px) {
+    .nav-middle {
+        overflow: hidden;
+        width: 0;
+    }
+
+    .nav-left {
+        width: 50%;
+    }
+}
+
+/* body */
+
+
+main {
+    padding: 1.5em;
+    width: 100%;
+    height: calc(100vh - 120px);
+    background-color: #8951f2;
+}
+
+.wraper {
+    margin: auto;
+    background-color: #1a133a;
+    padding: 20px;
+    border-radius: 10px;
+    min-width: 250px;
+    max-width: 600px;
+    height: 100%;
+}
+
+/* title - section */
+
+#title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: inherit;
+    height: 60px;
+    text-align: center;
+    color: white;
+    background-color: inherit;
+}
+
+#title h1 {
+    background-color: inherit;
+    font-size: 2em;
+    font-family: Montserrat;
+}
+
+/* title-end */
+
+#input {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: inherit;
+    width: 100%;
+    height: 80px;
+}
+
+#input>.input-box {
+    overflow: hidden;
+    height: 40px;
+    background-color: inherit;
+    width: 80%;
+    border: 2px solid rgb(148, 146, 146);
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+}
+
+
+#input>.input-box input {
+    background-color: transparent;
+    border: none;
+    height: 100%;
+    font-size: 1.2em;
+    width: 95%;
+    color: white;
+    text-indent: 10px;
+    font-family: Poppins;
+}
+
+#input>.input-box input:focus {
+    outline: none;
+}
+
+#input>.add-btn {
+    overflow: hidden;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    height: 40px;
+    background-color: rgb(20, 39, 56);
+    width: 20%;
+    border: 2px solid rgb(148, 146, 146);
+    border-left: none;
+}
+
+#input>.add-btn button {
+    cursor: pointer;
+    border: none;
+    height: 100%;
+    background-color: rgb(4, 132, 4);
+    color: white;
+    font-weight: 800;
+    width: 100%;
+    transition: all .1s linear;
+}
+
+#input>.add-btn button:hover {
+    background-color: rgba(4, 132, 4, 0.71);
+}
+
+
+
+/* to- do- section */
+
+#to-do-body {
+    position: relative;
+    display: flex;
+    height: calc(100% - 180px);
+    width: 100%;
+    background-color: inherit;
+}
+
+#to-do-body>ol {
+    overflow-y: scroll;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    background-color: inherit;
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    transition: all 1s linear;
+}
+
+#to-do-body>ol::-webkit-scrollbar {
+    display: none;
+}
+
+#to-do-body>ol li {
+    cursor: pointer;
+    background-color: #8c4afd;
+    margin: 3px 0;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 50px;
+    max-height: 50px;
+    border-radius: 6px;
+    border: 3px solid #1f1f1f;
+    transition: all .3s linear;
+}
+
+/* ========== */
+/* doubt */
+/* ========== */
+.del-animi {
+    transform: rotateX(90deg);
+}
+
+#to-do-body>ol>li:hover {
+    border-color: #8c4afd;
+}
+
+#to-do-body>ol .top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: -45px;
+    right: 5px;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    position: absolute;
+    background-color: #8951f2;
+
+}
+
+#to-do-body>ol .top a {
+    border-radius: 100%;
+}
+
+#to-do-body>ol .top i {
+    transition: all .2s linear;
+    border-radius: 100%;
+    color: #ffffff;
+    background-color: #8951f2;
+    font-size: 2em;
+    cursor: pointer;
+}
+
+#to-do-body>ol .top i:hover {
+    color: #1a133a;
+    background-color: white;
+}
+
+.content {
+    width: 75%;
+    overflow: hidden;
+
+}
+
+.content p {
+    font-size: 1em;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-family: Poppins;
+}
+
+.controls {
+    display: flex;
+    gap: 20px;
+}
+
+.edit,
+.del {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    cursor: pointer;
+
+}
+
+.edit i,
+.del i {
+    width: 100%;
+    height: 100%;
+    font-size: 1.4em;
+    color: inherit;
+    transition: all .1s linear;
+}
+
+.del i:hover {
+    color: rgb(255, 0, 0);
+}
+
+.edit i:hover {
+    color: rgb(26, 19, 58);
+}
+
+/* footer */
+footer {
+    background-color: #1f1f1f;
+    text-align: center;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+
+}
+
+footer marquee {
+    background-color: yellow;
+}
+
+footer p {
+    background-color: yellow;
+    color: black;
+    font-weight: 600;
+}
+
+footer>h4 {
+    color: whitesmoke;
+    margin-bottom: 14px;
+}
+
+
+
+
+
+
+/* edit -modal */
+#modal {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.767);
+    z-index: 99;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.edit-modal {
+    display: flex;
+    flex-flow: column nowrap;
+    margin: auto;
+    background-color: rgb(255, 255, 255);
+    min-width: 500px;
+    max-width: 500px;
+    height: 180px;
+    border-radius: 10px;
+    padding: 20px;
+    justify-content: space-evenly;
+}
+
+
+.edit_input {
+    font-style: italic;
+    color: #1f1f1f;
+    background-color: rgb(230, 230, 230);
+    border: none;
+    font-weight: 500;
+    border-radius: 5px;
+    font-size: 1.4em;
+    padding: 8px 12px;
+
+}
+
+.edit_input:focus {
+    outline-color: #4733b7cf;
+    outline-width: 5px;
+}
+
+.update-div {
+    width: 100%;
+    height: 50px;
+    background-color: #1f1f1f00;
+    display: flex;
+    gap: 12px;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+
+.cancel {
+    cursor: pointer;
+    background-color: red;
+    border-radius: 6px;
+    width: 90px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cancel:hover {
+    background-color: rgba(255, 0, 0, 0.852);
+}
+
+.save {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background-color: green;
+    border-radius: 6px;
+    width: 90px;
+    height: 40px;
+
+}
+
+.save:hover {
+    background-color: rgb(0, 128, 0, 0.852);
+}
