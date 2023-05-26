@@ -439,7 +439,7 @@ footer>h4 {
 }
 @media screen and (max-width:600px) {
     .edit-modal {
-        width: 60%;
+        width: 80%;
     }
 }
 
